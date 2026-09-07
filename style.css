@@ -2,22 +2,23 @@ h1{
     font-size: larger;
     font-family: Fortea, sans-serif;
     color: royalblue; /*teksti värv*/
-
+    background-color: lightcoral;
 }
 header h1{
     padding: 5%;
-
+    text-align: center;
     font-variant: small-caps;
-    border-bottom: 2px double royalblue;
+    border-bottom: 10px solid royalblue;
+    border-top: 10px solid royalblue;
 }
 header{
-    background-color: white; /*tausta värv*/
+    background-color: lightcoral; /*tausta värv*/
     background-image: url('Nimetu.png');
     background-repeat: no-repeat;
 }
 footer{
     padding: 5%;
-    background-color: white; /*tausta värv*/
+    background-color: lightcoral; /*tausta värv*/
     font-variant: small-caps;
     border-top: 2px double royalblue;
 }
@@ -28,6 +29,7 @@ section#kast1{
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
+    background-color: lightcoral;
 }
 section#kast2{
     border: 5px double dodgerblue; /*solid, double, dashed, dotted*/
@@ -36,6 +38,7 @@ section#kast2{
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
+    background-color: lightcoral;
 }
 section#kast3{
     border: 5px solid dodgerblue; /*solid, double, dashed, dotted*/
@@ -44,23 +47,25 @@ section#kast3{
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
+    background-color: lightcoral;
 }
 section#kast4{
-    border: 5px solid dodgerblue; /*solid, double, dashed, dotted*/
+    border: 25px solid dodgerblue; /*solid, double, dashed, dotted*/
     width: 15%;
     margin: 2px;
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
+    background-color: lightcoral;
 }
 section#kast5{
-    border: 5px solid  dodgerblue;
+    border: 25px solid  dodgerblue;
     width: 15%;
     margin: 10px;
     padding: 1%;
     text-align: center;
     font-weight: bold;
-
+    background-color: lightcoral;
 }
 section#pildigalerii{
     border: 5px double royalblue;
@@ -69,14 +74,16 @@ section#pildigalerii{
     margin: 4px;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
+    background-color: royalblue;
 }
 section#video{
     border: 5px double royalblue;
     width: 60%;
-    margin: 10px;
-    padding: 2%;
+    margin: 20px auto;
+    padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
+    background-color: royalblue;
 }
 #suurkast {
     display: grid;
@@ -89,7 +96,7 @@ section#video{
 nav ul{
     list-style-type: none; /*täpp võtab ära */
     margin: 0;
-    padding: 0; background-color: white;
+    padding: 0; background-color: lightcoral;
     text-align: center;
     display: flex;
     flex-direction: row;
