@@ -1,0 +1,98 @@
+h1{
+    font-size: larger;
+    font-family: Fortea, sans-serif;
+    color: royalblue; /*teksti värv*/
+
+}
+header h1{
+    padding: 5%;
+
+    font-variant: small-caps;
+    border-bottom: 2px double royalblue;
+}
+header{
+    background-color: white; /*tausta värv*/
+    background-image: url('Nimetu.png');
+    background-repeat: no-repeat;
+}
+footer{
+    padding: 5%;
+    background-color: white; /*tausta värv*/
+    font-variant: small-caps;
+    border-top: 2px double royalblue;
+}
+section#kast1{
+    border: 5px double dodgerblue; /*solid, double, dashed, dotted*/
+    width: 22%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 60px 120px 60px 120px;
+    text-align: center;
+}
+section#kast2{
+    border: 5px double dodgerblue; /*solid, double, dashed, dotted*/
+    width: 25%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 60px 120px 60px 120px;
+    text-align: center;
+}
+section#kast3{
+    border: 5px solid dodgerblue; /*solid, double, dashed, dotted*/
+    width: 15%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 60px 120px 60px 120px;
+    text-align: center;
+}
+section#kast4{
+    border: 5px solid dodgerblue; /*solid, double, dashed, dotted*/
+    width: 15%;
+    margin: 2px;
+    padding: 1%;
+    border-radius: 60px 120px 60px 120px;
+    text-align: center;
+}
+section#kast5{
+    border: 5px solid  dodgerblue;
+    width: 15%;
+    margin: 10px;
+    padding: 1%;
+    text-align: center;
+    font-weight: bold;
+
+}
+/****************NAV**********/
+nav ul{
+    list-style-type: none; /*täpp võtab ära */
+    margin: 0;
+    padding: 0; background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    display: block;
+    color: cornflowerblue;
+    text-decoration: none; /* alljoone on kustutatud */
+    padding: 10px;
+    text-align: center;
+    border-left: 2px solid royalblue;
+    border-right: 2px solid royalblue;
+}
+nav ul li a:hover{
+    background-color: whitesmoke;
+}
+nav{
+    padding: 40px;
+    margin: 10px;
+}
+main{
+    margin-top: 10px;
+}
