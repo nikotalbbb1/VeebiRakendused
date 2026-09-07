@@ -2,7 +2,7 @@ h1{
     font-size: larger;
     font-family: Fortea, sans-serif;
     color: royalblue; /*teksti värv*/
-    background-color: lightcoral;
+    background-color: darkseagreen;
 }
 header h1{
     padding: 5%;
@@ -12,13 +12,13 @@ header h1{
     border-top: 10px solid royalblue;
 }
 header{
-    background-color: lightcoral; /*tausta värv*/
+    background-color: darkseagreen; /*tausta värv*/
     background-image: url('Nimetu.png');
     background-repeat: no-repeat;
 }
 footer{
     padding: 5%;
-    background-color: lightcoral; /*tausta värv*/
+    background-color: darkseagreen; /*tausta värv*/
     font-variant: small-caps;
     border-top: 2px double royalblue;
 }
@@ -29,7 +29,7 @@ section#kast1{
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
-    background-color: lightcoral;
+    background-color: darkseagreen;
 }
 section#kast2{
     border: 5px double dodgerblue; /*solid, double, dashed, dotted*/
@@ -38,7 +38,7 @@ section#kast2{
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
-    background-color: lightcoral;
+    background-color: darkseagreen;
 }
 section#kast3{
     border: 5px solid dodgerblue; /*solid, double, dashed, dotted*/
@@ -47,7 +47,7 @@ section#kast3{
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
-    background-color: lightcoral;
+    background-color: darkseagreen;
 }
 section#kast4{
     border: 25px solid dodgerblue; /*solid, double, dashed, dotted*/
@@ -56,7 +56,7 @@ section#kast4{
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
-    background-color: lightcoral;
+    background-color: darkseagreen;
 }
 section#kast5{
     border: 25px solid  dodgerblue;
@@ -65,7 +65,7 @@ section#kast5{
     padding: 1%;
     text-align: center;
     font-weight: bold;
-    background-color: lightcoral;
+    background-color: darkseagreen;
 }
 section#pildigalerii{
     border: 5px double royalblue;
@@ -74,7 +74,7 @@ section#pildigalerii{
     margin: 4px;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
-    background-color: royalblue;
+    background-color: darkseagreen;
 }
 section#video{
     border: 5px double royalblue;
@@ -83,20 +83,16 @@ section#video{
     padding: 1%;
     border-radius: 60px 120px 60px 120px;
     text-align: center;
-    background-color: royalblue;
+    background-color: darkseagreen;
 }
-#suurkast {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
+
 
 
 /****************NAV**********/
 nav ul{
     list-style-type: none; /*täpp võtab ära */
     margin: 0;
-    padding: 0; background-color: lightcoral;
+    padding: 0; background-color: darkseagreen;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -106,23 +102,29 @@ nav ul{
 }
 nav ul li{
     float: left;
+    background-color: darkseagreen;
 }
 nav ul li a{
     display: block;
-    color: cornflowerblue;
+    font-family: Fortea, sans-serif;
+    color: royalblue;
     text-decoration: none; /* alljoone on kustutatud */
     padding: 10px;
     text-align: center;
     border-left: 2px solid royalblue;
     border-right: 2px solid royalblue;
+    background-color: darkseagreen;
 }
 nav ul li a:hover{
     background-color: whitesmoke;
+
 }
 nav{
     padding: 40px;
     margin: 10px;
+    background-color: darkseagreen;
 }
 main{
     margin-top: 10px;
+    background-color: darkseagreen;
 }
