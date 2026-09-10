@@ -1,4 +1,4 @@
-table{
+table#lithne{
     border: 1px solid #000;
     width: 30%;
     height: 100px;
@@ -6,4 +6,22 @@ table{
 }
 td{
     border: 1px solid #000;
+}
+table#keeruline1 td{
+    border: 1px solid red;
+    border-collapse: collapse;
+    text-align: center;
+    width: 10%;
+    height: 10px;
+}
+table#keeruline2 {
+    border: 1px solid blue;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    background-color: #354f52;
+}
+.nimia{
+    background-color: darkseagreen;
 }
