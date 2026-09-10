@@ -1,6 +1,7 @@
-html, body{
+body{
     margin: 0;
     background-color: darkseagreen;
+    padding: 0;
 }
 h1{
     font-size: larger;
