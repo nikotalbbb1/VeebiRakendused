@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "nav    main"
+        "footer footer";
+    min-height: 100vh;
+}
+h1{
+    font-size: larger;
+    font-family: 'Verdana', 'Tahoma', sans-serif;
+    color: #2f3e46; /*teksti värv*/
+    letter-spacing: 2px;
+}
+header h1{
+    padding: 3% 6%;
+    font-variant: small-caps;
+    border-bottom: 3px dashed #52796f;
+}
+header{
+    grid-area: header;
+    background: linear-gradient(135deg, #cad2c5 0%, #84a98c 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 6px groove #354f52;
+}
+footer{
+    grid-area: footer;
+    padding: 3% 5%;
+    background-color: #2f3e46;
+    color: #cad2c5;
+    font-variant: small-caps;
+    font-family: 'Verdana', 'Tahoma', sans-serif;
+    border-top: 6px groove #84a98c;
+    text-align: center;
+}
+section#kast1,
+section#kast2,
+section#kast3,
+section#kast4{
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 16px 10px;
+    padding: 2% 3%;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+section#kast1:hover,
+section#kast2:hover,
+section#kast3:hover,
+section#kast4:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+section#kast1{
+    width: 22%;
+    border: 3px dashed #52796f;
+}
+section#kast2{
+    width: 25%;
+    border: 3px dotted #354f52;
+}
+section#kast3{
+    width: 15%;
+    border: 3px double #84a98c;
+}
+section#kast4{
+    width: 15%;
+    border: 3px ridge #cad2c5;
+}
+section#kast5{
+    background-color: #52796f;
+    color: #ffffff;
+    width: 15%;
+    margin: 16px 10px;
+    padding: 2% 3%;
+    border: 3px solid #2f3e46;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+section#pildigalerii{
+    background-color: #f6f7f2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 3% 4%;
+    width: 100%;
+    margin: 16px 0;
+    border: 3px dashed #84a98c;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+section#video{
+    background-color: #2f3e46;
+    width: 60%;
+    margin: 24px auto;
+    padding: 3% 4%;
+    border: 3px double #cad2c5;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+
+/****************PAGE LAYOUT**********/
+nav{
+    grid-area: nav;
+    padding: 24px 0;
+    margin: 0;
+    background-color: #2f3e46;
+    border-right: 4px dashed #84a98c;
+}
+main{
+    grid-area: main;
+    margin: 0;
+    padding: 28px;
+}
+
+/****************NAV**********/
+nav ul{
+    list-style-type: none; /*täpp võtab ära */
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: hidden;
+    font-family: 'Verdana', 'Tahoma', sans-serif;
+}
+nav ul li{
+    float: none;
+    width: 100%;
+}
+nav ul li a{
+    display: block;
+    color: #cad2c5;
+    text-decoration: none; /* alljoone on kustutatud */
+    padding: 16px 24px;
+    text-align: left;
+    border: none;
+    border-left: 5px solid transparent;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+nav ul li a:hover{
+    background-color: #84a98c;
+    color: #2f3e46;
+    border-left: 5px solid #cad2c5;
+}
+
+/* На узких экранах меню возвращается наверх */
+@media (max-width: 768px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+    nav{
+        border-right: none;
+        border-bottom: 4px dashed #84a98c;
+    }
+    nav ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li a{
+        border-left: none;
+        border-bottom: 4px solid transparent;
+    }
+    nav ul li a:hover{
+        border-left: none;
+        border-bottom: 4px solid #cad2c5;
+    }
+}
