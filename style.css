@@ -1,3 +1,7 @@
+html, body{
+    margin: 0;
+    background-color: darkseagreen;
+}
 h1{
     font-size: larger;
     font-family: Fortea, sans-serif;
@@ -92,7 +96,8 @@ section#video{
 nav ul{
     list-style-type: none; /*täpp võtab ära */
     margin: 0;
-    padding: 0; background-color: darkseagreen;
+    padding: 0;
+    background-color: darkseagreen;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -116,15 +121,10 @@ nav ul li a{
     background-color: darkseagreen;
 }
 nav ul li a:hover{
-    background-color: whitesmoke;
-
+    background-color: mediumseagreen;
 }
 nav{
     padding: 40px;
     margin: 10px;
-    background-color: darkseagreen;
-}
-main{
-    margin-top: 10px;
     background-color: darkseagreen;
 }
