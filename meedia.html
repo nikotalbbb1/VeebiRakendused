@@ -1,10 +1,9 @@
-
 <!DOCTYPE html><!--deklaareerime HTML5 kommentaar-->
 <html lang="et">
 <head>
     <!--veebilehe tehniline info-->
     <meta charset="UTF-8">
-    <title>Nikita veebirakenduste aluste tööd</title>
+    <title>Nikita veebirakenduste aluste tööd - Meedia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,20 +37,50 @@
 
 <!--põhisisu-->
 <main>
-    <section id="kast3">
-        <h3>
-            Tutvustus
-        </h3>
-        <p>
-            Mina olen 2.kursuse tarkvaraarenduse õpilane.
-        </p>
-    </section>
-    <section id="kast4">
-        <h2>KONTAKTINFO</h2>
-        <div>
-            nikotalbbb@gmail.com
-        </div>
-    </section>
+    <!--kõik neli meedia sektsiooni on ühe ümbriku sees, et neid oleks lihtne CSS gridiga kahe kaupa reastada-->
+    <div id="meediakast">
+
+        <!--1. Pildigalerii - 6 juhuslikku pilti saidilt picsum.photos-->
+        <section id="pildigalerii">
+            <h2>Pildigalerii</h2>
+            <img src="https://picsum.photos/300/300?random=1" alt="Juhuslik pilt 1" width="300" height="300" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=2" alt="Juhuslik pilt 2" width="300" height="300" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=3" alt="Juhuslik pilt 3" width="300" height="300" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=4" alt="Juhuslik pilt 4" width="300" height="300" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=5" alt="Juhuslik pilt 5" width="300" height="300" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=6" alt="Juhuslik pilt 6" width="300" height="300" loading="lazy">
+        </section>
+
+        <!--2. Video - YouTube embed kood-->
+        <section id="video">
+            <h2>Video</h2>
+            <iframe width="300" height="200"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </section>
+
+        <!--3. Muusika - Spotify embed kood-->
+        <section id="muusika">
+            <h2>Muusika</h2>
+            <iframe style="border-radius:12px" width="300" height="152"
+                    src="https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+        </section>
+
+        <!--4. Kaart - Google Maps embed kood-->
+        <section id="kaart">
+            <h2>Kaart</h2>
+            <iframe width="300" height="200"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2044.5!2d24.7454!3d59.4370!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294fb3e1e6c37%3A0x71547f9f0af0dfd6!2sTallinna%20Raekoda!5e0!3m2!1sen!2see!4v1700000000000"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+    </div>
 </main>
 
 <!--jalus-->
