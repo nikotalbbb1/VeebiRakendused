@@ -3,6 +3,14 @@
     height: 210px;
     border: 1px solid lightgray;
     border-spacing: 0;
+    position: absolute;
+    top: 100px;
+    left: 40%;
+}
+#lipud{
+    position: absolute;
+    top: 10px;
+    left: 40%;
 }
 
 /*pseudoelementide kasutamine*/
