@@ -7,6 +7,33 @@
     top: 100px;
     left: 40%;
 }
+#taani{
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 350px;
+    left: 40%;
+}
+#prantsusmaa{
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 650px;
+    left: 40%;
+}
+#madagaskar{
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 900px;
+    left: 40%;
+}
 #lipud{
     position: absolute;
     top: 10px;
@@ -22,4 +49,54 @@
 }
 #eesti tr:nth-child(3){
     background-color: white;
+}
+#taani tr:nth-child(1) td:nth-child(1),
+#taani tr:nth-child(3) td:nth-child(1)
+{
+    /*esimene rida esimene lahter*/
+    background-color: red;
+    width: 65px;
+}
+#taani tr:nth-child(2){
+    background-color: white;
+    height: 45px;
+}
+#taani tr:nth-child(1) td:nth-child(3),
+#taani tr:nth-child(3) td:nth-child(3)
+{
+    /*3. rida 3. lahter*/
+    background-color: red;
+    width: 190px;
+}
+#taani tr:nth-child(1) td:nth-child(2),
+#taani tr:nth-child(3) td:nth-child(2)
+{
+    /*3. rida 3. lahter*/
+    background-color: white;
+    width: 40px;
+
+}
+#taani td{
+    border: 0px solid lightgray;
+}
+#prantsusmaa td:nth-child(1){
+    background-color: darkslateblue;
+}
+#prantsusmaa td:nth-child(2){
+    background-color: white;
+}
+#prantsusmaa td:nth-child(3){
+    background-color: red;
+}
+#madagaskar tr:nth-child(1) td:nth-child(1),
+#madagaskar tr:nth-child(1) td:nth-child(3){
+    background-color: white;
+    width: 105px;
+}
+#madagaskar tr:nth-child(1) td:nth-child(2){
+    background-color: red;
+
+}
+#madagaskar tr:nth-child(2) td:nth-child(1){
+    background-color: green;
 }
