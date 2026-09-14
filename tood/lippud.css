@@ -34,6 +34,15 @@
     top: 900px;
     left: 40%;
 }
+#sveits{
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 100px;
+    left: 60%;
+}
 #lipud{
     position: absolute;
     top: 10px;
@@ -79,11 +88,21 @@
 #taani td{
     border: 0px solid lightgray;
 }
+#prantsusmaa td{
+    border: 0px solid lightgray;
+}
+#madagaskar td{
+    border: 0px solid lightgray;
+}
+#sveits td{
+    border: 0px solid lightgray;
+}
 #prantsusmaa td:nth-child(1){
     background-color: darkslateblue;
 }
 #prantsusmaa td:nth-child(2){
     background-color: white;
+    width: 95px;
 }
 #prantsusmaa td:nth-child(3){
     background-color: red;
@@ -91,12 +110,34 @@
 #madagaskar tr:nth-child(1) td:nth-child(1),
 #madagaskar tr:nth-child(1) td:nth-child(3){
     background-color: white;
-    width: 105px;
+    width: 65px;
 }
 #madagaskar tr:nth-child(1) td:nth-child(2){
     background-color: red;
-
+    width: 105px;
 }
 #madagaskar tr:nth-child(2) td:nth-child(1){
     background-color: green;
+    width: 105px;
+}
+#sveits tr:nth-child(1) td:nth-child(1),
+#sveits tr:nth-child(3) td:nth-child(1)
+{
+    background-color: red;
+    width: 95px;
+}
+#sveits tr:nth-child(1) td:nth-child(2),
+#sveits tr:nth-child(3) td:nth-child(2)
+{
+    /*3. rida 3. lahter*/
+    background-color: white;
+    width: 40px;
+
+}
+#sveits tr:nth-child(1) td:nth-child(3),
+#sveits tr:nth-child(3) td:nth-child(3)
+{
+    /*3. rida 3. lahter*/
+    background-color: red;
+    width: 90px;
 }
