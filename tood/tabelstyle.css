@@ -1,3 +1,10 @@
+table #tabelis{
+    border: 10px solid #000;
+    width: 100%;
+    height: 550px;
+    text-align: center;
+}
+
 table#lithne{
     border: 1px solid #000;
     width: 30%;
@@ -21,6 +28,56 @@ table#keeruline2 {
     width: 100px;
     height: 50px;
     background-color: #354f52;
+}
+table#tabelis{
+    border: 1px solid #000;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+}
+
+#tabelis tr:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+#tabelis tr:nth-child(1) td:nth-child(2)
+{
+    background-color: darkred;
+}
+#tabelis tr:nth-child(2) td:nth-child(1){
+    background-color: blue;
+}
+#tabelis tr:nth-child(2) td:nth-child(2){
+    background-color: darkslateblue;
+}
+#tabelis tr:nth-child(2) td:nth-child(3){
+    background-color: royalblue;
+}
+#tabelis tr:nth-child(2) td:nth-child(4){
+    background-color: darkturquoise;
+}
+#tabelis tr:nth-child(3) td:nth-child(1){
+    background-color: greenyellow;
+}
+#tabelis tr:nth-child(3) td:nth-child(2){
+    background-color: orange;
+}
+#tabelis tr:nth-child(3) td:nth-child(3){
+    background-color: yellow;
+}
+#tabelis tr:nth-child(4) td:nth-child(1){
+    background-color: sandybrown;
+}
+#tabelis tr:nth-child(4) td:nth-child(2){
+    background-color: darkseagreen;
+}
+#tabelis tr:nth-child(4) td:nth-child(3){
+    background-color: orangered;
+}
+#tabelis tr:nth-child(5) td:nth-child(1){
+    background-color: brown;
+}
+#tabelis tr:nth-child(2) td:nth-child(3), tr:nth-child(3) td:nth-child(2){
+    border-spacing: 0;
 }
 .nimia{
     background-color: darkseagreen;
