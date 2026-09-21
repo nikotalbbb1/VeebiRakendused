@@ -9,7 +9,7 @@ table, td{
     border-radius: 30px;
     background-color: lightgray;
 }
-input[type=text], input[type=date] {
+input[type=text], input[type=date], input[type=submit], input[type=email] {
     border: 2px solid #ccc;
     border-radius: 4px;
     padding: 1%;
@@ -22,9 +22,24 @@ input[type=stiil]{
 label{
     font-weight: bold;
 }
-input[type=radio]:hover, input[type=radio]:focus{
+input[type=checkbox]:hover+lable:hover{
     background-color: lightgray;
     font-size: 20pt;
     width: 40px;
     height: 20px;
+}
+input[type=tund]:hover{
+    font-weight: bold;
+    padding: 1%;
+    background-color: blue;
+}
+input[type=fail]{
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 1%;
+}
+input[type=submit]{
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    color: black;
 }
