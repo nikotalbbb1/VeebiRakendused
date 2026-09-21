@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Map area</title>
+  <link rel="stylesheet" href="maparea.css">
+
+
+</head>
+<nav>
+  <ul>
+    <li>
+      <a href="../index.html">Kodu</a>
+    </li>
+  </ul>
+</nav>
+
+<body>
+<h1>Map area kasutamine</h1>
+<img src="arvutipilt.jpg" alt="arvuti pilt" usemap="#arvuti">
+<map name="arvuti">
+  <area shape="poly" coords="189,283,201,234,269,248" href="diagrammid.html" alt="">
+  <!-- rect cords ="x, y, x1, y2" -->
+  <!-- kolmnurk -- tuleb võta kõik koordinadid vasakult paremale-->
+  <area shape="rect" coords="257,327,291,303,338,338" href="https://app.diagrams.net/" alt="">
+  <area shape="poly" coords="337,367,369,328,433,339" href="paevik.html" alt="">
+
+</map>
+<h1>Miks on päevik kasulik?</h1>
+<div id="paeviktekst">Tööpäeviku pidamine on võimas vahend, mis aitab kiirendada karjääri arengut, suurendada isiklikku tõhusust ja vähendada stressi. See muudab igapäevaste ülesannete kaootilise voo struktureeritud kogemuseks.</div>
+<img src="paevik.jpg" id="paevikpilt" alt="">
+</body>
+</html>

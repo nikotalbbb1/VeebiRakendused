@@ -22,7 +22,7 @@ input[type=stiil]{
 label{
     font-weight: bold;
 }
-input[type=checkbox]:hover+lable:hover{
+input[type=checkbox]:hover{
     background-color: lightgray;
     font-size: 20pt;
     width: 40px;

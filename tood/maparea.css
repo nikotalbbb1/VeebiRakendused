@@ -1,0 +1,55 @@
+#diagram{
+    position: absolute;
+    top: 600px;
+    left: 750px;
+    width: 20%;
+    border: 1px solid #000;
+
+}
+div{
+    position: absolute;
+    font-family: 'Verdana', 'Tahoma', sans-serif;
+    text-align: center;
+    left: 300px;
+    top: 550px;
+}
+#paeviktekst{
+    position: absolute;
+    font-family: 'Verdana', 'Tahoma', sans-serif;
+    text-align: center;
+    top: 650px;
+    left: 50px;
+}
+#paevikpilt{
+    position: absolute;
+    left: 650px;
+    top: 750px;
+    width: 300px;
+    border: 1px solid #000;
+
+}
+#tekstkas{
+    position: absolute;
+    font-family: 'Verdana', 'Tahoma', sans-serif;
+    text-align: center;
+    top: 700px;
+}
+#kasulikpilt{
+    position: absolute;
+    left: 900px;
+    top: 750px;
+    width: 400px;
+    border: 1px solid #000;
+}
+nav ul{
+    list-style-type: none; /*täpp võtab ära */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #000;
+}
