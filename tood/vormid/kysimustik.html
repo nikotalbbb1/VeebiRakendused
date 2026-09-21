@@ -8,49 +8,116 @@
 <h1>Muusika küsimustik</h1>
 <div>HTML vormid ja nupud</div>
 <form action="#">
-  <label for="nimi">Nimi:</label>
-  <input type="text" id="nimi" placeholder="Nikita" required>
-    <br>
-    <label for="stiil">Vali meeldivaim muusikastiil</label>
-    <br>
-    <select name="stiil" id="stiil">
-        <option value="vali">vali...</option>
-        <option value="hiphop">HipHop</option>
-        <option value="kantri">Kantri</option>
-        <option value="rock">Rock</option>
-        <option value="metal">Metal</option>
-        <option value="jazz">Jazz</option>
-    </select>
-    <br>
-    <!-- radio nupud -üks valik mitmest -->
-    <strong>Kuidas sa muusikat peamiselt kuulad?</strong>
-    <br>
-    <input type="radio" name="platvorm" id="spotify">
-        <label for="spotify">Spotify</label>
-    <input type="radio" name="platvorm" id="raadio">
-    <label for="raadio">Raadio</label>
-    <input type="radio" name="platvorm" id="vinüüplaat">
-    <label for="vinüüplaat">Vinüüplaat</label>
+    <table border="1">
+        <tr>
+            <td>
+                <label for="nimi">Nimi:</label>
+            </td>
+            <td>
+                <input type="text" id="nimi" placeholder="Nikita" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="stiil">Vali meeldivaim muusikastiil</label>
+            </td>
+            <td>
+                <select name="stiil" id="stiil">
+                    <option value="vali">vali...</option>
+                    <option value="hiphop">HipHop</option>
+                    <option value="kantri">Kantri</option>
+                    <option value="rock">Rock</option>
+                    <option value="metal">Metal</option>
+                    <option value="jazz">Jazz</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <!-- radio nupud -üks valik mitmest -->
+            <td>
+                <strong>Kuidas sa muusikat peamiselt kuulad?</strong>
+            </td>
+            <td>
+                <input type="radio" name="platvorm" id="spotify">
+                <label for="spotify">Spotify</label>
+                <input type="radio" name="platvorm" id="raadio">
+                <label for="raadio">Raadio</label>
+                <input type="radio" name="platvorm" id="vinüüplaat">
+                <label for="vinüüplaat">Vinüüplaat</label>
 
-    <!-- checkbox -->
-    <fieldset>
-        <legend>Tee oma valikud - lemmik ansambel</legend>
-        <input  type="checkbox" name="lemmikud" id="rollingstones">
-            <label for="rollingstones">Rolling stones</label>
-        </input>
-        <br>
-        <input type="checkbox" name="lemmikud" id="systemofdown">
-        <label for="systemofdown">System of down</label>
-        <br>
-        <input type="checkbox" name="lemmikud" id="metallica">
-        <label for="metallica">Metallica</label>
-    </fieldset>
-    <br>
-    <label for="tund">
-        Mitu tundi päevas sa kuulad muusikat?
-    </label>
-    <br>
-    0<input type="range" id="tund" min="0" max="24">24
+            </td>
+        </tr>
+        <tr>
+            <!-- checkbox -->
+            <td colspan="2">
+                <fieldset>
+                    <legend>Tee oma valikud - lemmik ansambel</legend>
+                    <input  type="checkbox" name="lemmikud" id="rollingstones">
+                    <label for="rollingstones">Rolling stones</label>
+                    </input>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="systemofdown">
+                    <label for="systemofdown">System of down</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="metallica">
+                    <label for="metallica">Metallica</label>
+                    <br>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tund">
+                    Mitu tundi päevas sa kuulad muusikat?
+                </label>
+            </td>
+            <td>
+                0<input type="range" id="tund" min="0" max="24">24
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="värv">Millise värviga seostub sinu jaoks muusika?</label>
+            </td>
+            <td>
+                <input type="color" id="värv">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="file">Palun lisa fail oma lemmik laul</label>
+            </td>
+            <td>
+                <input type="file" id="file">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Sisesta oma email</label>
+            </td>
+            <td>
+                <input type="email" id="email" placeholder="näidis@gmail.com">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="date">Vormi täitmise kuupäev: </label>
+            </td>
+            <td>
+                <input type="date" id="date" value="2026-09-21">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="submit">Esita</label>
+            </td>
+            <td>
+                <input type="submit" id="submit">
+            </td>
+        </tr>
+
+    </table>
+
 </form>
 </body>
 </html>
