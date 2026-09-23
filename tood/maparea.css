@@ -10,23 +10,15 @@ div{
     position: absolute;
     font-family: 'Verdana', 'Tahoma', sans-serif;
     text-align: center;
-    left: 300px;
-    top: 550px;
-}
-#paeviktekst{
-    position: absolute;
-    font-family: 'Verdana', 'Tahoma', sans-serif;
-    text-align: center;
     top: 50px;
     left: 650px;
 }
-#paevikpilt{
+img{
     position: absolute;
     left: 450px;
     top: 150px;
     width: 300px;
     border: 1px solid #000;
-
 }
 #tekstkas{
     position: absolute;
