@@ -117,6 +117,17 @@
         </tr>
         <tr>
             <td>
+                <label for="arvamus">Mida arvad muusika kuulamisest koolis?</label>
+            </td>
+            <td>
+                <textarea name="arvamus" id="arvamus" cols="30" rows="10"></textarea>
+            </td>
+            <td>
+                <div id="vastus6"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <label for="date">Vormi täitmise kuupäev: </label>
             </td>
             <td>
@@ -125,10 +136,35 @@
         </tr>
         <tr>
             <td>
+                <label for="radiojaam">Radiojaam</label>
+            </td>
+            <td>
+                <input type="text" id="radiojaam" oninput="radioValik()">
+            </td>
+            <td>
+                <div id="vastus8"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <label for="submit">Esita</label>
             </td>
             <td>
                 <input type="submit" id="submit">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Kas sa kuulad raadio?</strong>
+            </td>
+            <td>
+                <input type="radio" name="radioValik" id="jah">
+                <label for="jah">Jah</label>
+                <input type="radio" name="radioValik" id="ei">
+                <label for="ei">Ei</label>
+            </td>
+            <td>
+                <div id="vastus7"></div>
             </td>
         </tr>
         <tr>
@@ -142,6 +178,7 @@
                 <div id="vastusKoik"></div>
             </td>
         </tr>
+
 
     </table>
 

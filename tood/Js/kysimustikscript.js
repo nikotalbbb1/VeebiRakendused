@@ -57,23 +57,15 @@ function checkboxValik(){
     return valik2;
 }
 //kasutab teisi funktsioone
-function naitaKoike(){
-    let vastusKoik=document.getElementById("vastusKoik");
-    let nimi=nimiLugemineKastist();
-    let valik=radioValik();
-    let valik2=checkboxValik();
-    let tund=rangeValik();
-    let stiil=selectValik();
-    vastusKoik.innerHTML="Sinu nimi on: "+nimi+'<br>'+'Sinu lemmikud on : '+valik2+'<br>'+'Sa kasutad ' + valik +'' +
-        '<br>'+'Sa kuuled ' + tund + ' tundi'+
-        'Sa valisid '+stiil;
-}
+
 function puhasta(){
     vastus1.innerHTML="";
     vastus2.innerHTML="";
     vastus3.innerHTML="";
     vastus4.innerHTML="";
     vastus5.innerHTML="";
+    vastus6.innerHTML="";
+    vastus7.innerHTML="";
     vastusKoik.innerHTML="";
 }
 //range
@@ -86,7 +78,7 @@ function rangeValik(){
 //select
 function selectValik(){
     let vastus5=document.getElementById("vastus5");
-    let stiil=document.getElementById("stiil");
+    let stiil=document.getElementById("still");
 
     if(stiil.selectedIndex!==0){
         vastus5.innerHTML="Sa valisid " +stiil.value;
@@ -95,4 +87,53 @@ function selectValik(){
         vastus5.innerHTML="Palun tee oma valik";
     }
     return stiil.value;
+}
+function textAreaArvamus(){
+   let vastus6=document.getElementById("vastus6");
+   let arvamus=document.getElementById("arvamus");
+   vastus6.innerHTML="Sinu arvamus : "+vastus6.value;
+   return arvamus.value;
+}
+function radioValik2(){
+    let vastus7=document.getElementById("vastus7");
+    let jah=document.getElementById("jah");
+    let ei=document.getElementById("ei");
+    let valik3="";
+    if(jah.checked){
+        valik3=jah.value;
+    }
+    else if(ei.value){
+        valik3=ei.value;
+    }
+    vastus7.innerHTML="Kas kuulad radio : "+valik3;
+    vastus7.style.backgroundColor="lightgreen";
+    return valik3;
+}
+function radiojaamValik(){
+   let vastus8=document.getElementById("vastus8");
+   let radiojaam=document.getElementById("radiojaam");
+   vastus8.innerHTML="Radiojaam : "+radiojaam.value;
+   return radiojaam.value;
+}
+function naitaKoike() {
+    let vastusKoik = document.getElementById("vastusKoik");
+
+    let nimi = nimiLugemineKastist();
+    let valik = radioValik();
+    let valik2 = checkboxValik();
+    let tund = rangeValik();
+    let stiil = selectValik();
+    let arvamus = textAreaArvamus();
+    let valik3 = radioValik2();
+    let radiojaam = radiojaamValik();
+
+    vastusKoik.innerHTML =
+        "Sinu nimi on: " + nimi + "<br>" +
+        "Sinu lemmikud on: " + valik2 + "<br>" +
+        "Sa kasutad: " + valik + "<br>" +
+        "Sa kuuled: " + tund + " tundi<br>" +
+        "Sa valisid: " + stiil + "<br>" +
+        "Sinu arvamus: " + arvamus + "<br>" +
+        "Kas kuulad raadiot? " + valik3 + "<br>"+
+        "Raadiojaam : " + radiojaam+ "<br>";
 }
