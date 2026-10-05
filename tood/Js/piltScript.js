@@ -12,24 +12,24 @@ function juhuslikPilt(){
     randomPilt.src=pilt;
 }
 function selectValik2(){
-    let vastus=document.getElementById('vastus');
-    let valik=document.getElementById('valik');
-    let randomPilt=document.getElementById('randomPilt');
+    let vastus = document.getElementById('vastus');
+    let valik = document.getElementById('valik');
+    let randomPilt = document.getElementById('randomPilt');
 
-    if(randomPilt.getAttribute('src')!=="valik.value"){
-        vastus.innerHTML="Õige";
+    if(randomPilt.getAttribute('src') !== valik.value){
+        vastus.innerHTML = "Õige";
     }
     else{
-        vastus.innerHTML="Vale";
+        vastus.innerHTML = "Vale";
     }
 }
 function radioValik(){
-    let piltvalik=document.getElementById('valik');
-    let valitudPilt=document.getElementById('valitudPilt');
-    for(let i=0;i<piltvalik.value.length;i++){
+    let piltvalik = document.getElementsByName('piltValik');
+    let valitudPilt = document.getElementById('valitudPilt');
 
+    for(let i = 0; i < piltvalik.length; i++){
         if(piltvalik[i].checked){
-            valitudPilt.src=piltvalik[i].value;
+            valitudPilt.src = piltvalik[i].value;
         }
     }
 }
