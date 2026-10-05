@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Piltide vahetus JS abil</title>
+    <link rel="stylesheet" href="piltStyle.css">
+    <script src="../Js/piltScript.js"></script>
+</head>
+<body>
+
+
+<h1>Juhuslik pilt</h1>
+<img src="../images/lill.png" alt="" id="randomPilt">
+<input type="button" onclick="juhuslikPilt()" value="Vaheta pilt">
+<section id="myistatus">
+    <h2>Mõisatus. Arva ära mida näed pildil?</h2>
+    <label for="valik">Tee oma valik</label>
+    <select name="valik" id="valik" onchange="selectValik2()">
+        <option value="vali...">Vali</option>
+        <option value="../images/smile.png">Smile</option>
+        <option value="../images/kurb.png">Sad</option>
+        <option value="../images/neutral.png">Neutral</option>
+        <option value="../images/lill.png">Lilleke</option>
+    </select>
+</section>
+<section id="valik2">
+    <h2>Pildi kuvamiseks tee oma valik</h2>
+    <input type="radio" name="piltValik" id="v1" value="../images/kurb.png" onclick="radioValik()">
+    <label for="v1">Kurb pilt</label>
+    <br>
+    <input type="radio" name="piltValik" id="v2" value="../images/smile.png" onclick="radioValik()">
+    <label for="v1">Smile pilt</label>
+    <br>
+    <input type="radio" name="piltValik" id="v3" value="../images/neutral.png" onclick="radioValik()">
+    <label for="v1">Neutral</label>
+    <br>
+    <input type="radio" name="piltValik" id="v4" value="../images/lill.png" onclick="radioValik()">
+    <label for="v1">Lill pilt</label>
+    <br>
+    <img src="" alt="" id="valitudPilt">
+</section>
+<div id="vastus">Siia tuleb vastus</div>
+</body>
+</html>
