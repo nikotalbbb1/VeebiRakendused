@@ -4,13 +4,13 @@ section#yld{
     gap: 10px;
 }
 section#kalk1{
-    border: 1pt solid greenyellow;
+    background: linear-gradient(to right, darkseagreen, darkgrey);
     border-radius: 10px;
     width: 30%;
     padding: 10px;
 }
 section#kalk2{
-    border: 1pt solid green;
+    background: linear-gradient(to right, dodgerblue, darkgrey);
     border-radius: 10px;
     width: 30%;
     padding: 10px;
@@ -20,8 +20,8 @@ section#kalk2{
     height: 150px;
 }
 section#kalk3{
-    border: 1pt solid yellow;
     border-radius: 10px;
     width: 30%;
     padding: 10px;
+    background: linear-gradient(to right, darkturquoise, honeydew);
 }
