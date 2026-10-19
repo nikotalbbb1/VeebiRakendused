@@ -19,3 +19,9 @@ section#kalk2{
     width: 150px;
     height: 150px;
 }
+section#kalk3{
+    border: 1pt solid yellow;
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+}
