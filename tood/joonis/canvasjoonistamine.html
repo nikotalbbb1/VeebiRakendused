@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas joonistamine</title>
+  <link rel="stylesheet" href="canvaStyle.css">
+  <script src="canvaScript.js"></script>
+</head>
+<body>
+<h1>Joonistusrakendus Canvas +js</h1>
+<canvas id="canvas" width="400" height="400"></canvas>
+<table>
+  <tr>
+    <td>
+      <input type="button" value="Puhasta" onClick="puhasta()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Joon" onClick="joon()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Kolmnurk" onClick="kolmnurk()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Ristkülik" onClick="ristkylik()"/>
+      <label for="laius">Laius:</label>
+      <input type="number" id="laius" min="1" max="50" step="2" onchange="ristkylik()"/>
+      <label for="kõrgus">Kõrgus:</label>
+      <input type="number" id="kõrgus" min="1" max="50" step="2" onchange="ristkylik()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Ring" onchange="ring()"/>
+      <label for="radius">Raadius:</label>
+      <input type="number" id="radius" min="1" max="50" step="2" onchange="ring()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Pilt" onClick="pilt()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Ratas1" onClick="ratas1()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Ratas2" onClick="ratas2()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="VaikeRatas1" onClick="vaikeratas1()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="VaikeRatas2" onClick="vaikeratas2()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Kere" onClick="kere()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Kere2" onClick="kere2()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="tul1" onClick="tul1()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="tul2" onClick="tul2()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="kõik" onClick="koik()"/>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
