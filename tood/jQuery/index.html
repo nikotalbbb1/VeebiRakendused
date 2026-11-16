@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery kasutamine</title>
+  <link rel="stylesheet" href="querystyle.css">
+  <script
+          src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $('#kuva').hide();
+      //nuppu peida vajutamine
+      $('#peida').click(function () {
+        $('#sisu,#sisupeal').hide(500);
+        $(this).hide();
+        $('#kuva').show(500);
+      });
+      $('#kuva').click(function () {
+        $('#sisu, #sisupeal').show(500);
+        $(this).hide();
+        $('#peida').show(500);
+      });
+    });
+    function xyKoordinat(event, ui){
+      let koht=ui.offset;
+      $('#vastus').html('x: '+koht.left+ '//// y: '+koht.top);
+    }
+    function start(){
+      $('#sisu').draggable(); // lohistada hiirega veebilehel
+      $('#pilt').draggable();
+      $('#pilt').bind("drag", xyKoordinat);
+      $('#sisu, #sisupeal').bind("drag", xyKoordinat);
+    }
+  </script>
+</head>
+<body onload="start()">
+<header>
+  <h1>jQuery kasutamine</h1>
+</header>
+<main>
+  <input type="button" value="--->" id="paremale" onclick="$('#sisu, h2').animate({left: '500px'}, 1000);$(this).hide();
+  $('#vasakule').show();">
+  <input type="button" value="<---" id="vasakule"  style="display: none"  onclick="$('#sisu, h2').animate({left: '0px'}, 1000);$(this).hide();
+  $('#paremale').show();">
+  <input type="button" value="peida" id="peida">
+  <input type="button" value="kuva" id="kuva">
+  <section>
+    <h2 id="sisupeal">jQuery File Upload</h2>
+      <div id="sisu">
+        File Upload widget with multiple file selection, drag&drop support, progress bars and preview images for jQuery. Supports cross-domain, chunked and resumable file uploads and client-side image resizing. Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.
+      </div>
+  </section>
+  <section>
+    <img src="https://i.pinimg.com/736x/ca/fc/92/cafc9266853b9cba3c694e1101563047.jpg" alt="" id="pilt">
+    <div id="vastus"></div>
+  </section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+#sisu{
+    position: relative;
+    left: 0;
+    width: 200px;
+    border: solid 2px red;
+    border-radius: 5px;
+}
+#sisupeal{
+    position: relative;
+}
+#pilt{
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
