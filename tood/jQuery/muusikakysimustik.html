@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Muusika küsimustik</title>
+</head>
+<body>
+<h1>Muusika küsimustik</h1>
+<script src="../Js/kysimustikscript.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+<script>
+  $(function(){
+    // peidame vead
+    $('.viga').hide();
+
+    // puhastusnupp
+    $('#puhasta').click(function(){
+      $('#muusikaVorm')[0].reset();
+      $('.viga').hide();
+    });
+
+    // valideerimine, kui vorm on saadetud
+    $('#muusikaVorm').submit(function(event){
+      let valid = true;
+
+      // 1. Checkbox
+      if($('input[name="lemmikud"]:checked').length === 0){
+        $('#viga1').show();
+        valid = false;
+      } else { $('#viga1').hide(); }
+
+      // 2. Textarea
+      if($('#arvamus').val().trim() === ""){
+        $('#viga2').show();
+        valid = false;
+      } else { $('#viga2').hide(); }
+
+      // 3. Number (0–24)
+      let tunnid = $('#tund').val();
+      if(tunnid === "" || isNaN(tunnid) || tunnid < 0 || tunnid > 24){
+        $('#viga3').show();
+        valid = false;
+      } else { $('#viga3').hide(); }
+
+      // 4. Radio
+      if($('input[name="platvorm"]:checked').length === 0){
+        $('#viga4').show();
+        valid = false;
+      } else { $('#viga4').hide(); }
+
+      // 5. Text (ainult tähed)
+      let tekst = $('#radiojaam').val().trim();
+      if(tekst === "" || !/^[a-zA-Z\s]+$/.test(tekst)){
+        $('#viga5').show();
+        valid = false;
+      } else { $('#viga5').hide(); }
+
+      // 6. Select
+      if($('#stiil').val() === ""){
+        $('#viga6').show();
+        valid = false;
+      } else { $('#viga6').hide(); }
+
+      // kui on vead, siis ei ole vaja vormi saada
+      if(!valid){
+        event.preventDefault();
+      } else {
+        alert("Vorm on edukalt saadetud!");
+      }
+    });
+  });
+
+</script>
+
+<div>HTML vormid ja nupud</div>
+<form action="#" id="muusikaVorm">
+  <table border="1">
+    <tr>
+      <td>
+        <label for="nimi">Nimi:</label>
+      </td>
+      <td>
+        <input type="text" id="nimi" placeholder="Nikita" oninput="nimiLugemineKastist()">
+      </td>
+      <td>
+        <div id="vastus1"></div>
+        <span class="viga" id="viga">Nimi peab olema tähtedes</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="stiil">Vali meeldivaim muusikastiil</label>
+      </td>
+      <td>
+        <select name="stiil" id="stiil" onchange="selectValik()">
+          <option value="vali">vali...</option>
+          <option value="hiphop">HipHop</option>
+          <option value="kantri">Kantri</option>
+          <option value="rock">Rock</option>
+          <option value="metal">Metal</option>
+          <option value="jazz">Jazz</option>
+        </select>
+      </td>
+      <td>
+        <div id="vastus5"></div>
+        <span class="viga" id="viga6">Stiilid peavad olema valitud</span>
+      </td>
+    </tr>
+    <tr>
+      <!-- radio nupud -üks valik mitmest -->
+      <td>
+        <strong>Kuidas sa muusikat peamiselt kuulad?</strong>
+      </td>
+      <td>
+        <input type="radio" name="platvorm" id="spotify" value="spotify" onclick="radioValik()">
+        <label for="spotify">Spotify</label>
+        <input type="radio" name="platvorm" id="raadio" value="raadio" onclick="radioValik()">
+        <label for="raadio">Raadio</label>
+        <input type="radio" name="platvorm" id="vinüüplaat" value="vinüüplaat" onclick="radioValik()" >
+        <label for="vinüüplaat">Vinüüplaat</label>
+
+      </td>
+      <td>
+        <div id="vastus2"></div>
+        <span class="viga" id="viga4">Vali vähemalt 1</span>
+      </td>
+    </tr>
+    <tr>
+      <!-- checkbox -->
+      <td colspan="2">
+        <fieldset>
+          <legend>Tee oma valikud - lemmik ansambel</legend>
+          <input  type="checkbox" name="lemmikud" id="rollingstones" value="rollingstones" onchange="checkboxValik()">
+          <label for="rollingstones">Rolling stones</label>
+          <br>
+          <input type="checkbox" name="lemmikud" id="systemofdown" value="systemofdown" onchange="checkboxValik()">
+          <label for="systemofdown">System of down</label>
+          <br>
+          <input type="checkbox" name="lemmikud" id="metallica" value="metallica" onchange="checkboxValik()">
+          <label for="metallica">Metallica</label>
+          <br>
+        </fieldset>
+      </td>
+      <td>
+        <div id="vastus3"></div>
+        <span class="viga" id="viga1">Vali vähemalt 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="tund">
+          Mitu tundi päevas sa kuulad muusikat?
+        </label>
+      </td>
+      <td>
+        0<input type="range" id="tund" min="0" max="24" onchange="rangeValik()">24
+      </td>
+      <td>
+        <div id="vastus4"></div>
+        <span class="viga" id="viga3">Tunnid peab olema valitud</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="värv">Millise värviga seostub sinu jaoks muusika?</label>
+      </td>
+      <td>
+        <input type="color" id="värv">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="file">Palun lisa fail oma lemmik laul</label>
+      </td>
+      <td>
+        <input type="file" id="file">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="email">Sisesta oma email</label>
+      </td>
+      <td>
+        <input type="email" id="email" placeholder="näidis@gmail.com">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="arvamus">Mida arvad muusika kuulamisest koolis?</label>
+      </td>
+      <td>
+        <textarea name="arvamus" id="arvamus" cols="30" rows="10"></textarea>
+      </td>
+      <td>
+        <div id="vastus6"></div>
+        <span class="viga" id="viga2">Arvamus peab olema kirjutatud</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="date">Vormi täitmise kuupäev: </label>
+      </td>
+      <td>
+        <input type="date" id="date" value="2026-09-21">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="radiojaam">Radiojaam</label>
+      </td>
+      <td>
+        <input type="text" id="radiojaam" oninput="radioValik()">
+      </td>
+      <td>
+        <div id="vastus8"></div>
+        <span class="viga" id="viga5">Stiilid peavad olema valitud</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="submit">Esita</label>
+      </td>
+      <td>
+        <input type="submit" id="submit">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Kas sa kuulad raadio?</strong>
+      </td>
+      <td>
+        <input type="radio" name="radioValik" id="jah">
+        <label for="jah">Jah</label>
+        <input type="radio" name="radioValik" id="ei">
+        <label for="ei">Ei</label>
+      </td>
+      <td>
+        <div id="vastus7"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="reset" value="Puhasta" id="puhasta" onclick="puhasta()">
+      </td>
+      <td>
+        <input type="submit" value="Näita" onclick="naitaKoike()">
+      </td>
+      <td>
+        <div id="vastusKoik"></div>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
