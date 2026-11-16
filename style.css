@@ -30,18 +30,14 @@ footer{
 section#kast1{
     border: 5px double dodgerblue; /*solid, double, dashed, dotted*/
     width: 22%;
-    margin: 2px;
     padding: 1%;
-    border-radius: 60px 120px 60px 120px;
     text-align: center;
     background-color: darkseagreen;
 }
 section#kast2{
     border: 5px double dodgerblue; /*solid, double, dashed, dotted*/
     width: 25%;
-    margin: 2px;
     padding: 1%;
-    border-radius: 60px 120px 60px 120px;
     text-align: center;
     background-color: darkseagreen;
 }
@@ -128,4 +124,14 @@ nav{
     padding: 40px;
     margin: 10px;
     background-color: darkseagreen;
+    position: relative;
+}
+img{
+    position: relative;
+}
+h1{
+    position: relative;
+}
+#kast1, #kast2{
+    position: relative;
 }

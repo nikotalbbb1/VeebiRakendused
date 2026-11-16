@@ -5,13 +5,49 @@
     <!--veebilehe tehniline info-->
     <meta charset="UTF-8">
     <title>Nikita veebirakenduste aluste tööd</title>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function xyKoordinat(event, ui){
+            let koht=ui.offset;
+            $('#vastus').html('x: '+koht.left+ '//// y: '+koht.top);
+        }
+        function start(){
+            $('#pealk').draggable(); // lohistada hiirega veebilehel
+            $('#pilt').draggable();
+            $('#pilt').bind("drag", xyKoordinat);
+            $('#pealk').bind("drag", xyKoordinat);
+        }
+        $(document).ready(function () {
+            $('#kuva').hide();
+            //nuppu peida vajutamine
+            $('#peida').click(function () {
+                $('#kast1, #kast2').hide(500);
+                $(this).hide();
+                $('#kuva').show(500);
+            });
+            $('#kuva').click(function () {
+                $('#kast1, #kast2').show(500);
+                $(this).hide();
+                $('#peida').show(500);
+            });
+        });
+        $(document).ready(function(){
+            $("#ahel").click(function(){
+                $("#jalus").css("color", "red").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
 </head>
-<body>
+<body onload="start()">
 <!--veebilehe sisu-->
 <!--päis-->
 <header>
-    <h1>
+    <h1 id="pealk">
         Nikita veebirakenduste aluste tööd
     </h1>
     <!--navigeerimismenüü-->
@@ -38,6 +74,13 @@
 
 <!--põhisisu-->
 <main>
+    <input type="button" value="--->" id="paremale" onclick="$('#kast1, #kast2').animate({left: '500px'}, 1000);$(this).hide();
+  $('#vasakule').show();">
+    <input type="button" value="<---" id="vasakule"  style="display: none"  onclick="$('#kast1, #kast2').animate({left: '0px'}, 1000);$(this).hide();
+  $('#paremale').show();">
+    <input type="button" value="ahel" id="ahel">
+    <input type="button" value="peida" id="peida">
+    <input type="button" value="kuva" id="kuva">
     <section id="kast1">
         <h3>
             Tere tulemast!
@@ -50,13 +93,24 @@
     <section id="kast2">
         <h2>Põnev pilt</h2>
         <div>
-            <img src="Nimetu.png" alt="see on ise tehtud pilt">
+            <img src="Nimetu.png" alt="see on ise tehtud pilt" id="pilt">
+        </div>
+        <div id="vastus"></div>
+    </section>
+    <section id="selgitus">
+        <div>
+            <h1>Selgitus</h1>
+             draggable pealkiri
+            <br>
+             section'id saame kuvada ja peida ja paremale vasakule liigutada
+            <br>
+            võime selle jalus punaseks värvida ja ülaosa alla liigutada
         </div>
     </section>
 </main>
 
 <!--jalus-->
-<footer>
+<footer id="jalus">
     Nikita leht &copy; 2026
 </footer>
 
